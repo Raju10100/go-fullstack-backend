@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const app = express()
 const mongoose = require('mongoose')
+const path = require('path')
 
 const stuffRoutes = require('./routes/stuff');
 const userRoutes = require('./routes/user')
@@ -16,6 +17,7 @@ mongoose.connection.on('error', ()=>{
 })
 
 app.use(bodyParser.json())
+app.use('/images', express.static(path.join(__dirname, 'images')))
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
