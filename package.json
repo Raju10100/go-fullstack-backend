@@ -9,10 +9,13 @@
   "author": "“krishna” <“http://www.krishnaswebsite.com”>",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "http": "0.0.0",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.6.4",
+    "mongoose-unique-validator": "^2.0.3",
     "nodemon": "^1.19.1"
   }
 }
